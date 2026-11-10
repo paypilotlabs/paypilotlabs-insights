@@ -91,21 +91,14 @@ const { waiting, canMigrate } = useV2MigrationNudge()
 				<div>
 					<h3 class="mb-1.5 text-base font-semibold text-gray-900">Need help?</h3>
 					<p>
-						Join the
+						Contact
 						<a
-							href="https://t.me/frappeinsights"
+							href="https://paypilotlabs.com/roadmap/"
 							target="_blank"
 							class="text-blue-600 underline hover:text-blue-700"
-							>Telegram community</a
+							>PayPilotLabs support</a
 						>
-						for migration support, or
-						<a
-							href="https://frappecloud.com/support"
-							target="_blank"
-							class="text-blue-600 underline hover:text-blue-700"
-							>create a support ticket</a
-						>
-						if you're on Frappe Cloud.
+						for migration help.
 					</p>
 				</div>
 			</div>

@@ -23,7 +23,6 @@
 			<DemoDataBanner v-if="!isSidebarCollapsed" class="m-2 p-2" />
 			<V2MigrationBanner v-if="!isSidebarCollapsed" class="m-2 p-2" />
 			<SecurityUpdateCard v-if="!isSidebarCollapsed" class="m-2 p-2" />
-			<TrialBanner v-if="is_fc_site" :is-sidebar-collapsed="isSidebarCollapsed" />
 			<SidebarLink
 				:label="isSidebarCollapsed ? __('Expand') : __('Collapse')"
 				:isCollapsed="isSidebarCollapsed"
@@ -69,13 +68,11 @@ import DemoDataBanner from './DemoDataBanner.vue'
 import V2MigrationBanner from './V2MigrationBanner.vue'
 import SecurityUpdateCard from './SecurityUpdateCard.vue'
 import UserDropdown from './UserDropdown.vue'
-import { TrialBanner } from 'frappe-ui/frappe'
 import { __ } from '../translation'
 
 const isSidebarCollapsed = useStorage('insights:sidebarCollapsed', false)
 
 const settings = useSettings()
-const is_fc_site = window.is_fc_site
 
 // `?settings=<tab>` opens the dialog on that tab. The settings live in a dialog
 // and not on a route, so this is the only way another app - v2 - can link into

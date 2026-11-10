@@ -74,42 +74,21 @@
 			</template>
 		</Dialog>
 
-		<Dialog
-			v-model="showLoginToFCDialog"
-			:options="{
-				title: __('Login to Frappe Cloud?'),
-				message: __('Are you sure you want to login to your Frappe Cloud dashboard?'),
-				actions: [
-					{
-						label: __('Confirm'),
-						variant: 'solid',
-						loading: loggingInToFC,
-						onClick() {
-							loginToFC()
-
-							showLoginToFCDialog.value = false
-						},
-					},
-				],
-			}"
-		/>
 	</div>
 </template>
 
 <script setup lang="ts">
-import { call, Dropdown } from 'frappe-ui'
+import { Dropdown } from 'frappe-ui'
 import { ChevronDown, HelpCircle, LogOut, MessageCircle, ToggleRight } from 'lucide-vue-next'
 import { h, ref } from 'vue'
 import { showErrorToast, waitUntil } from '../helpers'
 import { confirmDialog } from '../helpers/confirm_dialog'
 import session from '../session'
-import FrappeCloudIcon from './Icons/FrappeCloudIcon.vue'
 import { __ } from '../translation'
 
 const props = defineProps<{ isCollapsed?: boolean }>()
 
 const showSwitchToV2Dialog = ref(false)
-const showLoginToFCDialog = ref(false)
 
 const userDropdownOptions = ref([
 	{
@@ -152,13 +131,6 @@ waitUntil(() => session.initialized).then(() => {
 	}
 })
 
-if (window.is_fc_site) {
-	userDropdownOptions.value.splice(userDropdownOptions.value.length - 1, 0, {
-		icon: h(FrappeCloudIcon),
-		label: __('Login to Frappe Cloud'),
-		onClick: () => (showLoginToFCDialog.value = true),
-	})
-}
 
 function openInsightsV2() {
 	session.updateDefaultVersion(session.user.default_version).then(() => {
@@ -166,19 +138,4 @@ function openInsightsV2() {
 	})
 }
 
-const loggingInToFC = ref(false)
-function loginToFC() {
-	loggingInToFC.value = true
-	call('frappe.integrations.frappe_providers.frappecloud_billing.current_site_info')
-		.then((data: any) => {
-			if (!data.base_url || !data.site_name) {
-				throw new Error('Invalid response')
-			}
-			window.open(`${data.base_url}/dashboard/sites/${data.site_name}`, '_blank')
-		})
-		.catch(showErrorToast)
-		.finally(() => {
-			loggingInToFC.value = false
-		})
-}
 </script>
