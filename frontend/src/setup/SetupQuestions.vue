@@ -7,7 +7,7 @@ const questions = reactive([
 	{
 		question: 'What type of data/database system(s) are you planning to connect with Insights?',
 		answerOptions: [
-			'I plan to connect to PayPilotLabs Books',
+			'I plan to connect to PayPilotLabs ERP',
 			'I plan to use a SQL database (e.g., MySQL, PostgreSQL).',
 			'I plan to use spreadsheets (e.g., Excel, Google Sheets).',
 			'I plan to use a mix of different databases.',

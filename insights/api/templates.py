@@ -27,7 +27,7 @@ def get_installed_apps() -> set[str]:
 
 
 def _app_title(app: str) -> str:
-    """The app's display title (e.g. "PayPilotLabs Books"), for attribution in the library.
+    """The app's display title (e.g. "PayPilotLabs ERP"), for attribution in the library.
     Falls back to the package name if the title can't be read — doing so imports
     the app, which a not-genuinely-installed app (e.g. one faked in a test) can't
     satisfy, and a broken app shouldn't take down the library."""

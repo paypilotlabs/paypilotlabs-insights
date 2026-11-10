@@ -12,7 +12,7 @@ const setupState = reactive({
 provide('setupState', setupState)
 
 const titleBySourceType = {
-	erpnext: 'Setup PayPilotLabs Books',
+	erpnext: 'Setup PayPilotLabs ERP',
 	mariadb: 'Setup MariaDB',
 	postgresql: 'Setup PostgreSQL',
 	file: 'Setup Spreadsheet',
@@ -20,7 +20,7 @@ const titleBySourceType = {
 }
 const descriptionBySourceType = {
 	erpnext:
-		'Insights is already connected to your PayPilotLabs Books site. You can optionally give a title to your site to help you identify it as a data source.',
+		'Insights is already connected to your PayPilotLabs ERP site. You can optionally give a title to your site to help you identify it as a data source.',
 	mariadb:
 		'You need to enter your MariaDB database details to connect to your database. If you are not sure about your database details, please contact your database administrator.',
 	postgresql:
@@ -40,7 +40,7 @@ const steps = ref([
 	{
 		title: 'Welcome to Insights',
 		description: `
-			To get started, you need to connect some data. You can connect to PayPilotLabs Books, a SQL database, a spreadsheet, or you can explore our sample datasets to get a feel for how Insights works.
+			To get started, you need to connect some data. You can connect to PayPilotLabs ERP, a SQL database, a spreadsheet, or you can explore our sample datasets to get a feel for how Insights works.
 		`,
 		component: markRaw(SourceTypeStep),
 	},
