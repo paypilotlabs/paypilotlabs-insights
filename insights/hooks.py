@@ -1,10 +1,13 @@
 app_name = "insights"
-app_title = "Insights"
-app_publisher = "Frappe Technologies Pvt. Ltd."
+from insights.brand import BRAND
+
+app_title = BRAND["product_name"]
+app_logo_url = BRAND["logo"]
+app_publisher = BRAND["company"]
 app_description = "Powerful Reporting Tool for Frappe Apps"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "hello@frappe.io"
+app_email = BRAND["email"]
 app_license = "GNU GPLv3"
 
 export_python_type_annotations = True
@@ -14,8 +17,8 @@ require_type_annotated_api_methods = True
 add_to_apps_screen = [
     {
         "name": "insights",
-        "logo": "/assets/insights/frontend/insights-logo.png",
-        "title": "Insights",
+        "logo": BRAND["logo"],
+        "title": BRAND["product_name"],
         "route": "/insights",
         "has_permission": "insights.permissions.check_app_permission",
     }
