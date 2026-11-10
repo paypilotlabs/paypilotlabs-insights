@@ -190,3 +190,5 @@ frontend/components.d.ts
 docs/
 scripts/
 .claude/
+# local frappe_docker checkout used by docker/build.sh
+.frappe_docker/
