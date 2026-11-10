@@ -5,8 +5,8 @@ const emit = defineEmits(['next'])
 const selectedOption = ref(null)
 const options = reactive([
 	{
-		title: 'ERPNext',
-		description: 'Connect to your ERPNext site',
+		title: 'PayPilotLabs Books',
+		description: 'Connect to your PayPilotLabs Books site',
 		img: 'ERPNextIcon.png',
 	},
 	{

@@ -94,7 +94,7 @@ const userDropdownOptions = ref([
 	{
 		label: __('Documentation'),
 		icon: h(HelpCircle),
-		onClick: () => window.open('https://docs.frappe.io/insights', '_blank'),
+		onClick: () => window.open('https://paypilotlabs.com/roadmap/', '_blank'),
 	},
 	{
 		label: __('Join Telegram Group'),

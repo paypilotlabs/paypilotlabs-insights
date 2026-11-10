@@ -4,7 +4,7 @@
 			<div class="flex">
 				<img
 					src="../assets/insights-logo-new.svg"
-					alt="Frappe Insights"
+					alt="PayPilotLabs Insights"
 					class="mx-auto h-12"
 				/>
 			</div>
