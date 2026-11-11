@@ -39,7 +39,6 @@ class TestSecurityUpdate(InsightsIntegrationTestCase):
                 "available_version": "999.0.0",
                 "security_issues": 2,
                 "advisories_url": "https://github.com/frappe/insights/security/advisories",
-                "frappe_cloud_url": None,
             },
         )
 

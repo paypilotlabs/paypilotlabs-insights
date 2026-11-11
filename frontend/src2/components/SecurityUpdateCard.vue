@@ -11,7 +11,6 @@ type SecurityUpdate = {
 	available_version: string
 	security_issues: number
 	advisories_url: string
-	frappe_cloud_url: string | null
 }
 
 const update = ref<SecurityUpdate | null>(null)
@@ -43,17 +42,12 @@ const description = computed(() => {
 		  )
 })
 
-const action = computed(() => {
-	const url = update.value?.frappe_cloud_url || update.value?.advisories_url
-	return {
-		label: update.value?.frappe_cloud_url
-			? __('Update from Frappe Cloud')
-			: __('View Advisories'),
-		onClick: () => {
-			window.open(url, '_blank')
-		},
-	}
-})
+const action = computed(() => ({
+	label: __('View Advisories'),
+	onClick: () => {
+		window.open(update.value?.advisories_url, '_blank')
+	},
+}))
 </script>
 
 <template>
