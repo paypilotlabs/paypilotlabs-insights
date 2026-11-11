@@ -54,16 +54,8 @@ def import_demo_queries_and_dashboards():
 
 @insights_whitelist()
 def submit_survey_responses(responses: str):
-    responses = frappe.parse_json(responses)
-
-    try:
-        responses = json.dumps(responses, default=str, indent=4)
-        frappe.integrations.utils.make_post_request(
-            "https://frappeinsights.com/api/method/insights.telemetry.submit_survey_responses",
-            data={"response": responses},
-        )
-    except Exception:
-        frappe.log_error(title="Error submitting survey responses")
+    # PayPilotLabs: upstream posted these to frappeinsights.com; customer answers stay on the site
+    return
 
 
 def get_new_datasource(db):

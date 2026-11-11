@@ -79,7 +79,7 @@
 
 <script setup lang="ts">
 import { Dropdown } from 'frappe-ui'
-import { ChevronDown, HelpCircle, LogOut, MessageCircle, ToggleRight } from 'lucide-vue-next'
+import { ChevronDown, HelpCircle, LogOut, ToggleRight } from 'lucide-vue-next'
 import { h, ref } from 'vue'
 import { showErrorToast, waitUntil } from '../helpers'
 import { confirmDialog } from '../helpers/confirm_dialog'
@@ -95,11 +95,6 @@ const userDropdownOptions = ref([
 		label: __('Documentation'),
 		icon: h(HelpCircle),
 		onClick: () => window.open('https://paypilotlabs.com/roadmap/', '_blank'),
-	},
-	{
-		label: __('Join Telegram Group'),
-		icon: h(MessageCircle),
-		onClick: () => window.open('https://t.me/frappeinsights', '_blank'),
 	},
 	{
 		label: __('Log out'),

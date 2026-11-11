@@ -55,18 +55,10 @@ def get_context(context):
 
 
 def continue_to_v3(context):
-    try:
-        from frappe.integrations.frappe_providers.frappecloud_billing import is_fc_site
-    except ImportError:
-
-        def is_fc_site():
-            return False
-
     csrf_token = frappe.sessions.get_csrf_token()
     context.boot = {
         "csrf_token": csrf_token,
         "site_name": frappe.local.site,
-        "is_fc_site": is_fc_site(),
         "socketio_port": frappe.conf.get("socketio_port"),
     }
 

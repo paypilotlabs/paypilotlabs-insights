@@ -147,7 +147,7 @@ results = fetch_data_from_url()`
 						class="text-blue-500 underline"
 						href="https://frappeframework.com/docs/user/en/desk/scripting/script-api"
 					>
-						PayPilotLabs's Script API
+						the Script API reference
 					</a>
 				</div>
 				<div class="">

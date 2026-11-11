@@ -4,11 +4,11 @@ from insights.brand import BRAND
 app_title = BRAND["product_name"]
 app_logo_url = BRAND["logo"]
 app_publisher = BRAND["company"]
-app_description = "Powerful Reporting Tool for Frappe Apps"
+app_description = "Reporting and dashboards"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = BRAND["email"]
-app_license = "GNU GPLv3"
+app_license = "AGPL-3.0"
 
 export_python_type_annotations = True
 require_type_annotated_api_methods = True

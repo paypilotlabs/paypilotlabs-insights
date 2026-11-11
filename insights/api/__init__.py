@@ -34,8 +34,6 @@ def get_app_version():
 @insights_whitelist(role="Insights Admin")
 def get_security_update():
     """The Insights release with security fixes that the framework's weekly update check found."""
-    from frappe.utils.frappecloud import on_frappecloud
-
     if frappe.get_system_settings("disable_system_update_notification"):
         return
 
@@ -54,9 +52,6 @@ def get_security_update():
                 "available_version": app["available_version"],
                 "security_issues": app["security_issues"],
                 "advisories_url": f"https://github.com/{app['org_name']}/insights/security/advisories",
-                "frappe_cloud_url": f"https://frappecloud.com/dashboard/sites/{frappe.local.site}"
-                if on_frappecloud()
-                else None,
             }
 
 

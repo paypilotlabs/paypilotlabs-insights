@@ -340,10 +340,10 @@ def get_page_preview(url: str, headers: dict | None = None) -> bytes:
 
 
 def get_page_preview_via_service(url: str, headers: dict | None = None) -> bytes:
-    PREVIEW_GENERATOR_URL = (
-        frappe.conf.preview_generator_url
-        or "https://preview.frappe.cloud/api/method/preview_generator.api.generate_preview_from_url"
-    )
+    # PayPilotLabs: no third-party default; the request carries the viewer's headers
+    PREVIEW_GENERATOR_URL = frappe.conf.preview_generator_url
+    if not PREVIEW_GENERATOR_URL:
+        frappe.throw("Dashboard previews need preview_generator_url in site config")
 
     response = requests.post(
         PREVIEW_GENERATOR_URL,
