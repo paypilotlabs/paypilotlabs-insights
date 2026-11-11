@@ -187,7 +187,8 @@ todo
 frontend/package-lock.json
 .opencode/package-lock.json
 frontend/components.d.ts
-docs/
+docs/*
+!docs/*.md
 scripts/
 .claude/
 # local frappe_docker checkout used by docker/build.sh
