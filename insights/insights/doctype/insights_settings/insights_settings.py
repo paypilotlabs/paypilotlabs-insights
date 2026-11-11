@@ -67,13 +67,6 @@ class InsightsSettings(Document):
             self.telegram_api_token = settings.telegram_api_token
         self.save()
 
-    @property
-    def is_subscribed(self):
-        try:
-            return 1 if frappe.conf.sk_insights else 0
-        except Exception:
-            return None
-
 
 def sync_site_tables():
     if frappe.flags.in_test or os.environ.get("CI"):
