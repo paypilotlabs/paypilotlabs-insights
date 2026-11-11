@@ -1,7 +1,7 @@
 [project]
 name = "insights"
 authors = [
-    { name = "PayPilotLabs", email = "dev@paypilotlabs.com" },
+    { name = "PayPilotLabs", email = "founder@paypilotlabs.com" },
     { name = "Frappe Technologies Pvt. Ltd. and contributors (upstream frappe/insights)" },
 ]
 description = "PayPilotLabs Insights: reporting and dashboards"
