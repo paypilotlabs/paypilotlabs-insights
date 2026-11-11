@@ -1,9 +1,10 @@
 [project]
 name = "insights"
 authors = [
-    { name = "Powerful Reporting Tool for Frappe Apps", email = "hello@frappe.io"}
+    { name = "PayPilotLabs", email = "dev@paypilotlabs.com" },
+    { name = "Frappe Technologies Pvt. Ltd. and contributors (upstream frappe/insights)" },
 ]
-description = "Open Source Business Intelligence Tool"
+description = "PayPilotLabs Insights: reporting and dashboards"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
@@ -84,6 +85,7 @@ indent-style = "space"
 docstring-code-format = true
 
 [project.urls]
-Homepage = "https://frappe.io/insights"
-Repository = "https://github.com/frappe/insights.git"
-"Bug Reports" = "https://github.com/frappe/insights/issues"
+Homepage = "https://paypilotlabs.com"
+Repository = "https://github.com/paypilotlabs/paypilotlabs-insights.git"
+"Bug Reports" = "https://paypilotlabs.com/roadmap/"
+Upstream = "https://github.com/frappe/insights"
