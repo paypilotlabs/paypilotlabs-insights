@@ -83,7 +83,7 @@
 						/>
 					</Button>
 				</Tooltip>
-				<Button variant="ghost" @click="open('https://docs.frappeinsights.com')">
+				<Button variant="ghost" @click="open('https://paypilotlabs.com/roadmap/')">
 					<BookOpen class="h-4 text-gray-600" />
 				</Button>
 				<Dropdown
@@ -92,12 +92,7 @@
 						{
 							label: 'Documentation',
 							icon: 'help-circle',
-							onClick: () => open('https://docs.frappeinsights.com'),
-						},
-						{
-							label: 'Join Telegram Group',
-							icon: 'message-circle',
-							onClick: () => open('https://t.me/frappeinsights'),
+							onClick: () => open('https://paypilotlabs.com/roadmap/'),
 						},
 						{
 							label: 'Help',
