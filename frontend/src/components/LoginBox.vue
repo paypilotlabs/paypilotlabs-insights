@@ -13,13 +13,9 @@
 				<slot></slot>
 			</div>
 		</div>
-		<div class="fixed bottom-4 z-[1] flex w-full justify-center">
-			<FrappeLogo class="h-4" />
-		</div>
 	</div>
 </template>
 
 <script setup>
-import FrappeLogo from './Icons/FrappeLogo.vue'
 const props = defineProps(['title'])
 </script>

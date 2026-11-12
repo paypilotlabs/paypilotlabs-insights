@@ -145,7 +145,7 @@ results = fetch_data_from_url()`
 					to
 					<a
 						class="text-blue-500 underline"
-						href="https://frappeframework.com/docs/user/en/desk/scripting/script-api"
+						href="https://paypilotlabs.com/roadmap/"
 					>
 						the Script API reference
 					</a>
