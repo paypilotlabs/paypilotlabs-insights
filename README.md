@@ -9,7 +9,7 @@ By [PayPilotLabs](https://paypilotlabs.com). Support and requests: https://paypi
 PayPilotLabs Insights runs as a Frappe v16 site in Docker: MariaDB 11.8, Redis, and an image holding frappe + insights.
 
 1. The image pulls this repo and `paypilotlabs-framework` (branch `develop`) from `github.com/paypilotlabs`.
-2. Build the image: `./docker/build.sh` (repos are public; set `GITHUB_TOKEN` only for private forks)
+2. Build the image: `./docker/build.sh` (repos are public; set `GITHUB_TOKEN` only for private forks) It tags `paypilotlabsinsights:<git commit>` (push that one to ECR) and `paypilotlabsinsights:latest`.
 3. Start it: `docker compose -f docker/docker-compose.yml up -d`
 4. Watch the first-run setup: `docker compose -f docker/docker-compose.yml logs -f create-site` (wait for it to exit 0).
 5. Open http://insights.localhost:8080 and log in as `Administrator` / `admin`. Change the password straight away.
